@@ -6,7 +6,7 @@
 /*   By: ygille <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/14 11:32:13 by ygille            #+#    #+#             */
-/*   Updated: 2024/09/14 12:56:59 by ygille           ###   ########.fr       */
+/*   Updated: 2024/09/14 13:15:42 by ygille           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,17 +48,17 @@ void	print_longueur(int longueur, int hauteur, int chauteur)
 	}
 }
 
-void	rush(int longueur, int hauteur)
+void	rush(int x, int y)
 {
-	int	clongueur;
-	int	chauteur;
+	int	longueur;
+	int	hauteur;
 
-	chauteur = 0;
-	while (chauteur <= hauteur)
+	hauteur = 0;
+	while (hauteur <= y)
 	{
-		clongueur = 0;
-		print_longueur(longueur, hauteur, chauteur);
+		longueur = 0;
+		print_longueur(x, y, hauteur);
 		ft_putchar('\n');
-		chauteur++;
+		hauteur++;
 	}
 }
