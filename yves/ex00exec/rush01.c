@@ -6,60 +6,60 @@
 /*   By: ygille <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/14 11:32:13 by ygille            #+#    #+#             */
-/*   Updated: 2024/09/14 14:18:46 by ygille           ###   ########.fr       */
+/*   Updated: 2024/09/14 16:52:18 by ygille           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_putchar.c"
 
-void	corners(int x, int y, int hauteur, int longueur)
+void	corners(int x, int y, int height, int width)
 {
-	if (longueur == 1 && hauteur == 1)
+	if (width == 1 && height == 1)
 		ft_putchar('/');
-	if ((longueur == x && hauteur == 1) && x > 1)
+	if ((width == x && height == 1) && x > 1)
 		ft_putchar('\\');
-	if ((longueur == 1 && hauteur == y) && y > 1)
+	if ((width == 1 && height == y) && y > 1)
 		ft_putchar('\\');
-	if ((longueur == x && hauteur == y) && (y > 1 && x > 1))
+	if ((width == x && height == y) && (y > 1 && x > 1))
 		ft_putchar('/');
 }
 
-void	print_longueur(int x, int y, int hauteur)
+void	print_width(int x, int y, int height)
 {
-	int	longueur;
+	int	width;
 
-	longueur = 1;
-	while (longueur <= x)
+	width = 1;
+	while (width <= x)
 	{
-		corners(x, y, hauteur, longueur);
-		if (hauteur == 1 || hauteur == y)
+		corners(x, y, height, width);
+		if (height == 1 || height == y)
 		{
-			if (longueur != 1 && longueur != x)
+			if (width != 1 && width != x)
 				ft_putchar('*');
 		}
 		else
 		{
-			if (longueur == 1 || longueur == x)
+			if (width == 1 || width == x)
 				ft_putchar('*');
 			else
 				ft_putchar(' ');
 		}
-		longueur++;
+		width++;
 	}
 }
 
 void	rush(int x, int y)
 {
-	int	hauteur;
+	int	height;
 
 	if (x > 0 && y > 0)
 	{
-		hauteur = 1;
-		while (hauteur <= y)
+		height = 1;
+		while (height <= y)
 		{
-			print_longueur(x, y, hauteur);
+			print_width(x, y, height);
 			ft_putchar('\n');
-			hauteur++;
+			height++;
 		}
 	}
 }
