@@ -6,7 +6,7 @@
 /*   By: ygille <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/14 11:32:13 by ygille            #+#    #+#             */
-/*   Updated: 2024/09/14 13:53:12 by ygille           ###   ########.fr       */
+/*   Updated: 2024/09/14 14:02:58 by ygille           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ void	corners(int x, int y, int hauteur, int longueur)
 		ft_putchar('\\');
 	if ((longueur == 1 && hauteur == y) && y > 1)
 		ft_putchar('\\');
-	if ((longueur == x && hauteur == y) && (y > 1 && x >1))
+	if ((longueur == x && hauteur == y) && (y > 1 && x > 1))
 		ft_putchar('/');
 }
 
