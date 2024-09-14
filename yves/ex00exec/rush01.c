@@ -6,7 +6,7 @@
 /*   By: ygille <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/14 11:32:13 by ygille            #+#    #+#             */
-/*   Updated: 2024/09/14 14:02:58 by ygille           ###   ########.fr       */
+/*   Updated: 2024/09/14 14:18:46 by ygille           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,11 +52,14 @@ void	rush(int x, int y)
 {
 	int	hauteur;
 
-	hauteur = 1;
-	while (hauteur <= y)
+	if (x > 0 && y > 0)
 	{
-		print_longueur(x, y, hauteur);
-		ft_putchar('\n');
-		hauteur++;
+		hauteur = 1;
+		while (hauteur <= y)
+		{
+			print_longueur(x, y, hauteur);
+			ft_putchar('\n');
+			hauteur++;
+		}
 	}
 }
