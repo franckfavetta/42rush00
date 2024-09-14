@@ -6,57 +6,55 @@
 /*   By: ygille <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/14 11:32:13 by ygille            #+#    #+#             */
-/*   Updated: 2024/09/14 13:15:42 by ygille           ###   ########.fr       */
+/*   Updated: 2024/09/14 13:40:26 by ygille           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 //#include "ft_putchar.c"
 
-void	corners(int longueur, int hauteur, int chauteur, int clongueur)
+void	corners(int x, int y, int hauteur, int longueur)
 {
-	if (clongueur == 0 && chauteur == 0)
+	if (longueur == 1 && hauteur == 1)
 		ft_putchar('/');
-	if (clongueur == longueur && chauteur == 0)
+	if (longueur == x && hauteur == 1)
 		ft_putchar(92);
-	if (clongueur == 0 && chauteur == hauteur)
+	if (longueur == 1 && hauteur == y)
 		ft_putchar(92);
-	if (clongueur == longueur && chauteur == hauteur)
+	if (longueur == x && hauteur == y)
 		ft_putchar('/');
 }
 
-void	print_longueur(int longueur, int hauteur, int chauteur)
+void	print_longueur(int x, int y, int hauteur)
 {
-	int	clongueur;
+	int	longueur;
 
-	clongueur = 0;
-	while (clongueur <= longueur)
+	longueur = 1;
+	while (longueur <= x)
 	{
-		corners(longueur, hauteur, chauteur, clongueur);
-		if (chauteur == 0 || chauteur == hauteur)
+		corners(x, y, hauteur, longueur);
+		if (hauteur == 1 || hauteur == y)
 		{
-			if (clongueur != 0 && clongueur != longueur)
+			if (longueur != 1 && longueur != x)
 				ft_putchar('*');
 		}
 		else
 		{
-			if (clongueur == 0 || clongueur == longueur)
+			if (longueur == 1 || longueur == x)
 				ft_putchar('*');
 			else
 				ft_putchar(' ');
 		}
-		clongueur++;
+		longueur++;
 	}
 }
 
 void	rush(int x, int y)
 {
-	int	longueur;
 	int	hauteur;
 
-	hauteur = 0;
+	hauteur = 1;
 	while (hauteur <= y)
 	{
-		longueur = 0;
 		print_longueur(x, y, hauteur);
 		ft_putchar('\n');
 		hauteur++;
