@@ -6,11 +6,11 @@
 /*   By: ygille <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/14 11:32:13 by ygille            #+#    #+#             */
-/*   Updated: 2024/09/14 16:53:53 by ygille           ###   ########.fr       */
+/*   Updated: 2024/09/15 16:57:56 by ygille           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-//#include "ft_putchar.c"
+void	ft_putchar(char a);
 
 void	corners(int x, int y, int height, int width)
 {

@@ -6,11 +6,11 @@
 /*   By: ygille <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/14 11:30:46 by ygille            #+#    #+#             */
-/*   Updated: 2024/09/15 11:21:58 by ygille           ###   ########.fr       */
+/*   Updated: 2024/09/15 16:57:07 by ygille           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-//#include "rush01.c"
+void	rush(int x, int y);
 
 int	satoi(char *str)
 {
@@ -28,6 +28,8 @@ int	satoi(char *str)
 	}
 	while (str[pos])
 	{
+		if (! (str[pos] >= '0' && str[pos] <= '9'))
+			return (0);
 		num = num + (str[pos] - 48);
 		if (str[pos + 1])
 			num *= 10;
